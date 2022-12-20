@@ -32,7 +32,7 @@ class Ui_weather(object):
 "border: 0;")
         self.weather_detail_block = QGroupBox(self.groupBox_2)
         self.weather_detail_block.setObjectName(u"weather_detail_block")
-        self.weather_detail_block.setGeometry(QRect(410, 0, 161, 211))
+        self.weather_detail_block.setGeometry(QRect(410, 20, 161, 141))
         self.weather_detail_block.setStyleSheet(u"background-color: #D9D9D9;")
         self.yandex_week_logo_2 = QLabel(self.weather_detail_block)
         self.yandex_week_logo_2.setObjectName(u"yandex_week_logo_2")
@@ -356,9 +356,10 @@ class Ui_weather(object):
         self.week_days_yandex.addWidget(self.week_day_yandex_7)
 
         self.week_detail_block.raise_()
+        self.groupBox_2.raise_()
         self.weather_yandex.raise_()
         self.weather_yandex_data.raise_()
-        self.widget1.raise_()
+        self.widget.raise_()
         self.layoutWidget.raise_()
         self.label_2.raise_()
         self.week_day.raise_()
@@ -382,7 +383,6 @@ class Ui_weather(object):
         self.week_day_mailru_5.raise_()
         self.week_day_mailru_6.raise_()
         self.week_day_mailru_7.raise_()
-        self.groupBox_2.raise_()
         self.groupBox.raise_()
 
         self.retranslateUi(weather)

@@ -39,9 +39,9 @@ border: 0;</string>
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>0</y>
+      <y>20</y>
       <width>161</width>
-      <height>211</height>
+      <height>141</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -818,6 +818,7 @@ border: 0;</string>
    </widget>
   </widget>
   <zorder>week_detail_block</zorder>
+  <zorder>groupBox_2</zorder>
   <zorder>weather_yandex</zorder>
   <zorder>weather_yandex_data</zorder>
   <zorder></zorder>
@@ -850,7 +851,6 @@ border: 0;</string>
   <zorder>week_day_mailru_5</zorder>
   <zorder>week_day_mailru_6</zorder>
   <zorder>week_day_mailru_7</zorder>
-  <zorder>groupBox_2</zorder>
   <zorder>groupBox</zorder>
  </widget>
  <resources/>

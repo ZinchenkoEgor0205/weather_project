@@ -104,8 +104,9 @@ class Window(QDialog, Ui_weather):
         self.anim_3 = QPropertyAnimation(self.child3, b'size')
         self.anim_3.setEasingCurve(QEasingCurve.InOutCubic)
         self.anim_3.setDuration(1000)
-        self.child.setGraphicsEffect(effect)
-        self.anim_4 = QPropertyAnimation(effect, b'opacity')
+        effect2 = QGraphicsOpacityEffect(self.child2)
+        self.child.setGraphicsEffect(effect2)
+        self.anim_4 = QPropertyAnimation(effect2, b'opacity')
         print(self.child.pos())
         if self.weather_week_detail_btn.isChecked():
             self.anim.setEndValue(QPoint(self.child.pos().x(), self.child.pos().y()+250))
@@ -139,5 +140,6 @@ class Window(QDialog, Ui_weather):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     w = Window()
+    w.setWindowTitle('weather')
     w.show()
     app.exec()
