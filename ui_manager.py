@@ -78,7 +78,6 @@ class Window(QDialog, Ui_weather):
         self.anim_2 = QPropertyAnimation(effect, b"opacity")
 
         self.anim_2.setDuration(500)
-        print(self.child.pos())
         if self.weather_detail_btn.isChecked():
             self.anim.setEndValue(QPoint(self.child.pos().x() + 170, self.child.pos().y()))
             self.anim_2.setStartValue(1)
@@ -107,17 +106,15 @@ class Window(QDialog, Ui_weather):
         effect2 = QGraphicsOpacityEffect(self.child2)
         self.child.setGraphicsEffect(effect2)
         self.anim_4 = QPropertyAnimation(effect2, b'opacity')
-        print(self.child.pos())
         if self.weather_week_detail_btn.isChecked():
-            self.anim.setEndValue(QPoint(self.child.pos().x(), self.child.pos().y()+250))
+            self.anim.setEndValue(QPoint(self.child.pos().x(), self.child.pos().y() + 250))
             self.anim.setEasingCurve(QEasingCurve.OutBounce)
             self.anim.setDuration(2000)
             self.anim_2.setStartValue(1)
             self.anim_2.setEndValue(0.7)
             self.anim_4.setStartValue(0)
             self.anim_4.setEndValue(1)
-            print(self.child3.size())
-            self.anim_3.setEndValue(QSize(self.child3.size().width(), self.child3.size().height()+280))
+            self.anim_3.setEndValue(QSize(self.child3.size().width(), self.child3.size().height() + 250))
             self.anim_4.setDuration(500)
             # w.setGeometry(w.pos().x(), w.pos().y())
         else:
@@ -128,7 +125,7 @@ class Window(QDialog, Ui_weather):
             self.anim_2.setEndValue(1)
             self.anim_4.setStartValue(1)
             self.anim_4.setEndValue(0)
-            self.anim_3.setEndValue(QSize(self.child3.size().width(), self.child3.size().height() - 280))
+            self.anim_3.setEndValue(QSize(self.child3.size().width(), self.child3.size().height() - 250))
             self.anim_4.setDuration(1000)
         self.anim.start()
         self.anim_2.start()
